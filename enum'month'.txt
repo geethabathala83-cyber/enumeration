@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+// Define an enumeration for months
+enum Month {
+    January = 1, February, March, April, May, June,
+    July, August, September, October, November, December
+};
+
+int main() {
+    int monthNumber;
+    printf("Enter month number (1-12): ");
+    scanf("%d", &monthNumber);
+
+    // Check for valid input
+    if (monthNumber < 1 || monthNumber > 12) {
+        printf("Invalid month number!\n");
+        return 0;
+    }
+
+    enum Month month = monthNumber;
+
+    switch (month) {
+        case January:   printf("Month: January\n"); break;
+        case February:  printf("Month: February\n"); break;
+        case March:     printf("Month: March\n"); break;
+        case April:     printf("Month: April\n"); break;
+        case May:       printf("Month: May\n"); break;
+        case June:      printf("Month: June\n"); break;
+        case July:      printf("Month: July\n"); break;
+        case August:    printf("Month: August\n"); break;
+        case September: printf("Month: September\n"); break;
+        case October:   printf("Month: October\n"); break;
+        case November:  printf("Month: November\n"); break;
+        case December:  printf("Month: December\n"); break;
+    }
+
+    return 0;
+}
